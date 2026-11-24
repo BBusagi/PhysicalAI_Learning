@@ -1,0 +1,19 @@
+# Third-party robot assets (EngineAI) - not redistributed, see README
+Mujoco & T800/robot/
+*.mnn
+
+# Generated outputs (08b / 09 save figures to <repo>/outputs/)
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

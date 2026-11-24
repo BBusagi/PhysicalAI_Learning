@@ -1,0 +1,56 @@
+===Mujoco & 众擎T800==================================
+Matpotlib 画图库
+Tkinter 标准图形库
+
+Mujoco 加载 设置状态 仿真
+XML配置文件，导入模型，循环计算
+基本组成Link Joint Motor
+基本参数 nbody，njnt，nq，nv，nu
+连杆的重量极其重要
+
+状态参数 
+nq nv nu 
+qpos qvel ctrl
+
+mj_step
+PD控制 Proportional&Derivative
+controlrange，真实关键的扭矩
+
+手动控制的难点，多维度，高耦合
+
+MNN 轻量级神经网络推理引擎 → netron
+OBS_SiZE ACTION_SIZE
+卷积权重 = 输出通道数 × 输入通道数 × 卷积核高 × 卷积核宽
+关节pos偏差 22 + 关节速度 22 + 上一帧action指令 22 + 角速度 3 + 重力方向 3
+
+日志重要的四个参数 t STATE POLICY PD
+
+初始高度可以自己进行地面检测决定
+infer_action input_tensor
+
+感知 → 规划 → 控制
+感知：YOLO MaskRCNN / opencv / RGB-D 
+
+开发三问
+身体部件在哪里？目标物体在哪里？空间关系是什么？
+
+原子化小任务
+技术发展
+仿真建立
+MPC/强化学习 行为克隆
+理解物理的位置
+
+思考list
+1 模型在哪里？本体模型 URDF/ROS MJCF/mujoco USD/Isaac，策略模型
+2 状态空间是如何定义的？本体 外部 任务 历史 特权信息
+3 控制器是PD还是MPC？
+4 策略模型的输入输出是什么？
+5 交互是视觉伺服还是力反馈？
+
+
+===机械臂Openarm==================================
+机械臂控制方案
+1 经典控制yib
+2 预训练+经典控制
+3 VLA通用控制
+4 特定任务
